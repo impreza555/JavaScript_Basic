@@ -7,6 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        'use strict'
+
+        function addNum(num1, num2) {
+            return num1 + num2
+        }
+
+        function subtractNum(num1, num2) {
+            return num1 - num2
+        }
+
+        function multiplyNum(num1, num2) {
+            return num1 * num2
+        }
+
+        function divideNum(num1, num2) {
+            return num1 / num2
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch(operation) {
+                case 'сложение':
+                    alert(addNum(a, b));
+                    break;
+                case 'вычитание':
+                    alert(subtractNum(a, b));
+                    break;
+                case 'умножение':
+                    alert(multiplyNum(a, b));
+                    break;
+                case 'деление':
+                    alert(divideNum(a, b));
+                    break;
+            }
+        }
+
+        let a = parseInt(prompt('Введите первое число'));
+        let b = parseInt(prompt('Введите второе число'));
+        let opr = prompt('Введите операцию: сложение, вычитание, умножение или  деление');
+        mathOperation(a, b, opr);
+    </script>
 </body>
 </html>
