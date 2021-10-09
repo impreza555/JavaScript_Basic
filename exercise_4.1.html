@@ -16,14 +16,14 @@
                 res_object.units = num % 10;
                 res_object.tens = Math.floor(num / 10 % 10);
                 res_object.hundreds = Math.floor(num / 100);
-                return res_object
+                return res_object;
             } else {
-                console.log('Неверный ввод. Требуется целое число от 0 до 999.')
-                return res_object
+                console.log('Неверный ввод. Требуется целое число от 0 до 999.');
+                return res_object;
             }
         };
 
-        console.log(numToObject(257))
+        console.log(numToObject(257));
     </script>
 </body>
 </html>
