@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // ES5
+        function Post5(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+        Post5.prototype.edit = function (new_text) {
+            this.text = new_text;
+        };
+        function AttachedPost5(author, text, date, highlighted = false) {
+            Post5.call(this, author, text, date);
+            this.highlighted = highlighted;
+        }
+        AttachedPost5.prototype = Object.create(Post5.prototype);
+        AttachedPost5.prototype.constructor = AttachedPost5;
+        AttachedPost5.prototype.makeTextHighlighted = function() {
+            this.highlighted = true;
+        };
+
+        let obj01 = new Post5('John', 'Hello!', '13.04.2020');
+        obj01.edit('Hi!');
+        console.log(obj01);
+        let obj1 = new AttachedPost5('Вася', 'Привет!', '20.02.2021');
+        obj1.edit('Здарова!');
+        obj1.makeTextHighlighted();
+        console.log(obj1);
+
+        // ES6
+        class Post6 {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+            edit(new_text) {
+                this.text = new_text;
+            }
+        }
+        class AttachedPost6 extends Post6 {
+            constructor(author, text, date, highlighted = false) {
+                super(author, text, date);
+                this.highlighted = highlighted;
+            }
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        let obj02 = new Post6('Max', 'Goodbye!', '18.12.2020');
+        obj02.edit('Bye!');
+        console.log(obj02);
+        let obj2 = new AttachedPost6('Зина', 'До свиданья!', '6.06.2021');
+        obj2.edit('Пока!');
+        obj2.makeTextHighlighted();
+        console.log(obj2);
+    </script>
+</body>
+</html>
