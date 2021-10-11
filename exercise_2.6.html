@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let user_input = prompt('Введите ваше число:');
+        let suffix = undefined;
+        let reg1 = /^1$|^\d*([02-9]1)$/; // рубль
+        let reg2 = /^[2-4]$|^\d*([02-9][2-4])$/; // рубля
+        let reg3 =/^\d*(1[0-9])$|^\d*([05-9])$/; // рублей
+        if (reg1.test(user_input)) {
+            suffix = 1
+        };
+        if (reg2.test(user_input)) {
+            suffix = 2
+        };
+        if (reg3.test(user_input)) {
+            suffix = 3
+        };
+        switch (suffix) {
+            case 1:
+                alert('Ваша сумма в ' + user_input + ' рубль успешно зачислена.');
+                break;
+            case 2:
+                alert('Ваша сумма в ' + user_input + ' рубля успешно зачислена.');
+                break;
+            case 3:
+                alert('Ваша сумма в ' + user_input + ' рублей успешно зачислена.');
+                break;
+            default:
+                alert('Вы ввели что-то не то!');
+        }
+    </script>
+</body>
+</html>
