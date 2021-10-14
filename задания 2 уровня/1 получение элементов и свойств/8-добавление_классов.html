@@ -11,7 +11,7 @@
     <b class="sign">Lorem, ipsum.</b>
     <b>Lorem, ipsum.</b>
 
-    <!-- 
+    <!--
     Задание.
     1. Получите все теги b.
     2. С помощью метода contains() из classList, проверьте, есть ли у тега
@@ -19,7 +19,13 @@
     -->
 
     <script>
-        
+        'use strict';
+        let b = document.querySelectorAll('b');
+        for (let i = 0; i < b.length; i++) {
+            if (!b[i].classList.contains('sign')) {
+                b[i].classList.add('sign');
+            }
+        }
     </script>
 </body>
 </html>

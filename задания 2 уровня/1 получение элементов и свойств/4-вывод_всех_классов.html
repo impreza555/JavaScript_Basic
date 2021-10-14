@@ -8,7 +8,7 @@
 <body>
     <div class="one two three"></div>
 
-    <!-- 
+    <!--
     Задание.
     1. Сохраните в переменную тег div.
     2. Создайте переменную classes, и в нее сохраните значение свойства classList.
@@ -16,7 +16,10 @@
      -->
 
     <script>
-        
+        'use strict';
+        let div = document.querySelector('div');
+        let classes = div.classList;
+        classes.forEach(el => console.log(el));
     </script>
 </body>
 </html>
