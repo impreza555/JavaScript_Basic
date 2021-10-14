@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+
     <div class="product">
         <span class="productName">Товар 1</span>
         Описание товара
     </div>
 
-    <!-- 
+    <!--
     Задание.
     1. Сохраните в переменную ссылку на .product
     2. Назначьте обработку клика по .product, у функции обработчика объявите
@@ -22,6 +22,12 @@
     <div>Другое описание</div>
     для этого вышеописанную разметку пишите в виде строки в innerHTML.
     -->
-
+    <Script>
+        'use strict';
+        let div = document.querySelector('.product');
+        div.addEventListener('click', function (event) {
+            event.target.innerHTML = '<div>Другой товар</div><div>Другое описание</div>';
+        });
+    </Script>
 </body>
 </html>
