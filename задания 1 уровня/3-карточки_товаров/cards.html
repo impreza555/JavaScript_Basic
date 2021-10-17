@@ -44,7 +44,15 @@
     -->
 
     <script>
-
+        'use strict';
+        let product = document.querySelectorAll('.product');
+        product.forEach(function(el) {
+            el.style.backgroundColor = 'yellow';
+        });
+        let product_name = document.querySelectorAll('.productName');
+        product_name.forEach(function (el) {
+            el.style.fontSize = '24px';
+        });
     </script>
 </body>
 </html>
