@@ -19,7 +19,7 @@
         <button>Отправить</button>
     </form>
 
-    <!-- 
+    <!--
         Задание. Вам нужно проверять пусто ли в input'ах при отправке формы.
         Если в инпуте пусто делаете ему красную рамку. Если хотя бы в одном
         инпуте пусто форма не должна отправляться.
@@ -36,7 +36,20 @@
      -->
 
     <script>
-        
+        'use strict';
+        let formEl = document.querySelector('form');
+        let inputFirst = document.getElementById('first');
+        let inputSecond = document.getElementById('second');
+        formEl.addEventListener('submit', function(event) {
+            if (!inputFirst.value) {
+                inputFirst.style.borderColor = 'red';
+                event.preventDefault();
+            }
+            if (!inputSecond.value) {
+                inputSecond.style.borderColor = 'red';
+                event.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
