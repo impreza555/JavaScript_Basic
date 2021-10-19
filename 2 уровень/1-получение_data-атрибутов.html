@@ -10,7 +10,7 @@
     <button data-id="2" data-value="btn2">Кнопка 2</button>
     <button data-id="3" data-value="btn3">Кнопка 3</button>
 
-    <!-- 
+    <!--
     Задание. Нужно при клике на кнопку выводить в консоль значения ее
     data- атрибутов.
     1. Получите все кнопки например с помощью querySelectorAll
@@ -20,7 +20,13 @@
     -->
 
     <script>
-        
+        'use strict';
+        let buttons = document.querySelectorAll('button');
+        buttons.forEach(function(el) {
+            el.addEventListener('click', function(event) {
+                console.log(event.target.dataset);
+            });
+        });
     </script>
 </body>
 </html>

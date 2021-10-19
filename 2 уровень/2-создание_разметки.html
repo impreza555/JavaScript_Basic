@@ -11,7 +11,8 @@
     <img src="https://picsum.photos/200/300?random=3" alt="pic3"> -->
 
     <script>
-        /* 
+        'use strict';
+        /*
         Задание.
         С помощью цилка for добавьте в body 6 картинок, по примеру тех, что закомментированы
         выше. Картинки вставляйте со помощью insertAdjacentHTML. При генерации разметки
@@ -19,7 +20,10 @@
         ниже:
         <img src="https://picsum.photos/200/300?random=${счетчик_цикла_здесь}" alt="pic${счетчик_цикла_здесь}">
         */
-       
+        let body = document.querySelector('body');
+        for (let i = 1; i <= 6; i++) {
+            body.insertAdjacentHTML('beforeend', `<img src="https://picsum.photos/200/300?random=${i}" alt="pic${i}">`);
+        }
     </script>
 </body>
 </html>
