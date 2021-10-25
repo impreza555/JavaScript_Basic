@@ -17,7 +17,7 @@ function init() {
 }
 init();
 
-document.addEventListener('scroll', function(event) {
+document.addEventListener('scroll', function (event) {
     if (scrollCheck.getBoundingClientRect().top <= window.innerHeight) {
         // 5. Если условие истинно вызывайте insertPosts.
         insertPosts();
