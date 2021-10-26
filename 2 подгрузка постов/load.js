@@ -52,6 +52,6 @@ function getPostMarkup(counter) {
     let num = new Date().getTime() + counter;
     return `<div class="post">
         <img src="https://picsum.photos/200/300?random=${num}">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dicam, inquam, et quidem discendi causa magis, quam quo te aut Epicurum reprehensum velim. Partim cursu et peragratione laetantur, congregatione aliae coetum quodam modo civitatis imitantur; Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Duo Reges: constructio interrete. Tecum optime, deinde etiam cum mediocri amico. Restatis igitur vos; Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Ergo id est convenienter naturae vivere, a natura discedere. Cum autem venissemus in Academiae non sine causa nobilitata spatia, solitudo erat ea, quam volueramus. Quae ista amicitia est? Quid in isto egregio tuo officio et tanta fide-sic enim existimo-ad corpus refers? Quodsi ipsam honestatem undique pertectam atque absolutam. Sedulo, inquam, faciam. Quae duo sunt, unum facit.
+        ${text}
     </div>`;
 }
