@@ -49,6 +49,7 @@ function getPostMarkup(counter) {
     /* 2. Сделайте, чтобы в num записывалось текущее время unix (https://mzl.la/3iMz2Jr)
     плюс counter
     */
+    let text = Lorem();
     let num = new Date().getTime() + counter;
     return `<div class="post">
         <img src="https://picsum.photos/200/300?random=${num}">
